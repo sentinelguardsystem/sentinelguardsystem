@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -30,17 +29,27 @@
             line-height: 1.6;
         }
 
+        /* HEADER & LOGO IN TOP RIGHT CORNER */
         header {
             background: linear-gradient(135deg, var(--secondary) 0%, var(--primary-dark) 100%);
             color: white;
-            padding: 2rem 1rem;
-            text-align: center;
+            padding: 2rem 1.5rem;
             border-bottom: 5px solid var(--accent);
+            position: relative;
         }
 
         .header-container {
             max-width: 1200px;
             margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .header-text {
+            text-align: left;
+            flex-grow: 1;
         }
 
         .logo-title {
@@ -49,12 +58,13 @@
             letter-spacing: 1px;
             color: white;
             text-transform: uppercase;
+            line-height: 1.2;
         }
 
         .subtitle {
             font-size: 1.2rem;
             color: var(--accent);
-            margin-top: 0.5rem;
+            margin-top: 0.3rem;
             font-weight: 600;
             letter-spacing: 2px;
         }
@@ -65,6 +75,34 @@
             opacity: 0.9;
         }
 
+        /* TOP RIGHT LOGO STYLING */
+        .top-right-logo-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 8px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3), 0 0 10px rgba(0, 180, 216, 0.4);
+            border: 2px solid var(--accent);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            flex-shrink: 0;
+        }
+
+        .top-right-logo-container:hover {
+            transform: scale(1.03);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4), 0 0 15px rgba(0, 180, 216, 0.7);
+        }
+
+        .top-right-logo {
+            max-height: 110px;
+            width: auto;
+            object-fit: contain;
+            display: block;
+            border-radius: 6px;
+        }
+
+        /* NAVIGATION BAR */
         nav {
             background: var(--secondary);
             padding: 1rem;
@@ -121,7 +159,7 @@
             border-radius: 2px;
         }
 
-        /* Packages Section */
+        /* PACKAGES SECTION */
         .packages-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -219,7 +257,7 @@
             background: var(--whatsapp-dark);
         }
 
-        /* Services Section */
+        /* SERVICES SECTION */
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -264,7 +302,7 @@
             text-decoration: underline;
         }
 
-        /* Quote Form Box */
+        /* QUOTE FORM SECTION */
         .quote-form-section {
             background: white;
             padding: 2.5rem;
@@ -319,7 +357,7 @@
             background: var(--whatsapp-dark);
         }
 
-        /* Hardware Section */
+        /* HARDWARE SECTION */
         .hardware-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -341,7 +379,7 @@
             font-size: 1rem;
         }
 
-        /* Info & Contact Box */
+        /* INFO & CONTACT CONTAINER */
         .info-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -402,7 +440,21 @@
             color: var(--accent);
         }
 
+        /* RESPONSIVE LAYOUT ADJUSTMENTS */
         @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column-reverse;
+                text-align: center;
+            }
+            .header-text {
+                text-align: center;
+            }
+            .top-right-logo-container {
+                margin-bottom: 0.5rem;
+            }
+            .top-right-logo {
+                max-height: 90px;
+            }
             .logo-title { font-size: 1.8rem; }
             .subtitle { font-size: 1rem; }
             .nav-links { gap: 1rem; }
@@ -413,9 +465,15 @@
 
     <header>
         <div class="header-container">
-            <h1 class="logo-title">Sentinel Guard System</h1>
-            <div class="subtitle">Integrated Solutions</div>
-            <p class="tagline">Securing Today, Protecting Tomorrow</p>
+            <div class="header-text">
+                <h1 class="logo-title">Sentinel Guard System</h1>
+                <div class="subtitle">Integrated Solutions</div>
+                <p class="tagline">Securing Today, Protecting Tomorrow</p>
+            </div>
+            <!-- LOGO POSITIONED AT TOP RIGHT -->
+            <div class="top-right-logo-container">
+                <img src="logo.jpg.jpg" alt="Sentinel Guard System Logo" class="top-right-logo" onerror="this.onerror=null; this.src='logo.jpg';">
+            </div>
         </div>
     </header>
 
@@ -432,7 +490,6 @@
 
     <div class="container">
 
-        <!-- INSTANT WHATSAPP QUOTE FORM -->
         <section id="quote">
             <div class="quote-form-section">
                 <h2 class="section-title">Request a Free Quote via WhatsApp</h2>
@@ -476,12 +533,11 @@
             </div>
         </section>
 
-        <!-- SPECIAL PACKAGES -->
         <section id="packages">
             <h2 class="section-title">Special CCTV Camera Packages</h2>
             <div class="packages-grid">
                 
-                <!-- 4 Channel -->
+                <!-- 4 Channel Package -->
                 <div class="package-card">
                     <div class="package-header">
                         <div class="package-title">4 Channel Package</div>
@@ -500,7 +556,7 @@
                     </a>
                 </div>
 
-                <!-- 8 Channel -->
+                <!-- 8 Channel Package -->
                 <div class="package-card">
                     <div class="package-header popular">
                         <span class="package-badge">Best Value</span>
@@ -520,7 +576,7 @@
                     </a>
                 </div>
 
-                <!-- 16 Channel -->
+                <!-- 16 Channel Package -->
                 <div class="package-card">
                     <div class="package-header">
                         <div class="package-title">16 Channel Package</div>
@@ -542,7 +598,6 @@
             </div>
         </section>
 
-        <!-- SERVICES -->
         <section id="services">
             <h2 class="section-title">Our Services</h2>
             <div class="services-grid">
@@ -605,7 +660,6 @@
             </div>
         </section>
 
-        <!-- HARDWARE -->
         <section id="hardware">
             <h2 class="section-title">Integrated Equipment</h2>
             <div class="hardware-grid">
@@ -620,7 +674,6 @@
             </div>
         </section>
 
-        <!-- INFO & CONTACT -->
         <section id="contact">
             <div class="info-container">
                 
@@ -676,7 +729,7 @@
             var service = document.getElementById('serviceType').value;
             var notes = document.getElementById('clientNotes').value;
             
-            var phoneNumber = "639517656601"; // Philippines international format (+63)
+            var phoneNumber = "639517656601";
             
             var message = "Hello Sentinel Guard System! I would like to request a quote:%0A%0A" +
                           "*Name:* " + encodeURIComponent(name) + "%0A" +
