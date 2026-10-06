@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -13,7 +14,7 @@
             --whatsapp-dark: #128C7E;
             --light: #f8f9fa;
             --dark: #1e293b;
-            --card-bg: #ffffff;
+            --card-bg: rgba(255, 255, 255, 0.95);
         }
 
         * {
@@ -23,15 +24,18 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
+        /* BACKGROUND IMAGE WITH OVERLAY */
         body {
-            background-color: #f0f4f8;
+            background: linear-gradient(rgba(13, 27, 42, 0.85), rgba(13, 27, 42, 0.85)), url('background.jpg.jpg') no-repeat center center fixed;
+            background-size: cover;
             color: var(--dark);
             line-height: 1.6;
+            min-height: 100vh;
         }
 
         /* HEADER & LOGO IN TOP RIGHT CORNER */
         header {
-            background: linear-gradient(135deg, var(--secondary) 0%, var(--primary-dark) 100%);
+            background: linear-gradient(135deg, rgba(13, 27, 42, 0.95) 0%, rgba(0, 77, 86, 0.95) 100%);
             color: white;
             padding: 2rem 1.5rem;
             border-bottom: 5px solid var(--accent);
@@ -104,12 +108,13 @@
 
         /* NAVIGATION BAR */
         nav {
-            background: var(--secondary);
+            background: rgba(13, 27, 42, 0.95);
             padding: 1rem;
             position: sticky;
             top: 0;
             z-index: 100;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+            backdrop-filter: blur(5px);
         }
 
         .nav-links {
@@ -140,11 +145,12 @@
         .section-title {
             text-align: center;
             margin-bottom: 2rem;
-            color: var(--secondary);
+            color: #ffffff;
             position: relative;
             padding-bottom: 0.5rem;
             text-transform: uppercase;
             letter-spacing: 1px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
         }
 
         .section-title::after {
@@ -155,7 +161,7 @@
             transform: translateX(-50%);
             width: 80px;
             height: 4px;
-            background: var(--primary);
+            background: var(--accent);
             border-radius: 2px;
         }
 
@@ -171,16 +177,17 @@
             background: var(--card-bg);
             border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-            border: 1px solid #e2e8f0;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+            border: 1px solid rgba(255, 255, 255, 0.3);
             transition: transform 0.3s, box-shadow 0.3s;
             display: flex;
             flex-direction: column;
+            backdrop-filter: blur(5px);
         }
 
         .package-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
         }
 
         .package-header {
@@ -266,14 +273,15 @@
         }
 
         .service-card {
-            background: white;
+            background: var(--card-bg);
             padding: 1.5rem;
             border-radius: 8px;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+            box-shadow: 0 3px 10px rgba(0,0,0,0.15);
             border-left: 4px solid var(--primary);
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            backdrop-filter: blur(5px);
         }
 
         .service-card h3 {
@@ -283,7 +291,7 @@
         }
 
         .service-card p {
-            color: #64748b;
+            color: #475569;
             font-size: 0.95rem;
             margin-bottom: 1rem;
         }
@@ -304,12 +312,22 @@
 
         /* QUOTE FORM SECTION */
         .quote-form-section {
-            background: white;
+            background: var(--card-bg);
             padding: 2.5rem;
             border-radius: 12px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
             margin-bottom: 3rem;
             border-top: 5px solid var(--whatsapp);
+            backdrop-filter: blur(5px);
+        }
+
+        .quote-form-section .section-title {
+            color: var(--secondary);
+            text-shadow: none;
+        }
+
+        .quote-form-section .section-title::after {
+            background: var(--primary);
         }
 
         .form-group {
@@ -329,6 +347,7 @@
             border: 1px solid #cbd5e1;
             border-radius: 6px;
             font-size: 1rem;
+            background: #ffffff;
         }
 
         .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
@@ -366,12 +385,13 @@
         }
 
         .hardware-card {
-            background: white;
+            background: var(--card-bg);
             padding: 1.2rem;
             border-radius: 8px;
             text-align: center;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-            border: 1px solid #e2e8f0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+            border: 1px solid rgba(226, 232, 240, 0.8);
+            backdrop-filter: blur(5px);
         }
 
         .hardware-card h4 {
@@ -388,10 +408,11 @@
         }
 
         .info-box {
-            background: white;
+            background: var(--card-bg);
             padding: 2rem;
             border-radius: 12px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+            backdrop-filter: blur(5px);
         }
 
         .info-box h3 {
@@ -421,7 +442,7 @@
         }
 
         footer {
-            background: var(--secondary);
+            background: rgba(13, 27, 42, 0.95);
             color: white;
             text-align: center;
             padding: 2rem;
