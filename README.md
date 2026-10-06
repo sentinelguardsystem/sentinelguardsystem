@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -12,6 +12,8 @@
             --accent: #00b4d8;
             --whatsapp: #25D366;
             --whatsapp-dark: #128C7E;
+            --messenger: #0084FF;
+            --messenger-dark: #006AFF;
             --light: #f8f9fa;
             --dark: #1e293b;
             --card-bg: rgba(255, 255, 255, 0.95);
@@ -165,6 +167,53 @@
             border-radius: 2px;
         }
 
+        /* BUTTON GROUPS & ACTIONS */
+        .btn-group {
+            display: flex;
+            gap: 0.5rem;
+            margin: 1rem 1.5rem 1.5rem 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .package-btn {
+            flex: 1;
+            min-width: 130px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.4rem;
+            text-align: center;
+            color: white;
+            padding: 0.8rem 0.5rem;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s, transform 0.2s;
+            border-radius: 6px;
+            font-size: 0.95rem;
+            border: none;
+            cursor: pointer;
+        }
+
+        .package-btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .btn-whatsapp {
+            background: var(--whatsapp);
+        }
+
+        .btn-whatsapp:hover {
+            background: var(--whatsapp-dark);
+        }
+
+        .btn-messenger {
+            background: var(--messenger);
+        }
+
+        .btn-messenger:hover {
+            background: var(--messenger-dark);
+        }
+
         /* PACKAGES SECTION */
         .packages-grid {
             display: grid;
@@ -243,31 +292,10 @@
             border-bottom: none;
         }
 
-        .package-btn {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 0.5rem;
-            text-align: center;
-            background: var(--whatsapp);
-            color: white;
-            padding: 1rem;
-            text-decoration: none;
-            font-weight: bold;
-            transition: background 0.3s;
-            margin: 1.5rem;
-            border-radius: 6px;
-            font-size: 1.05rem;
-        }
-
-        .package-btn:hover {
-            background: var(--whatsapp-dark);
-        }
-
         /* SERVICES SECTION */
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 1.5rem;
             margin-bottom: 3rem;
         }
@@ -296,18 +324,37 @@
             margin-bottom: 1rem;
         }
 
+        .service-links {
+            display: flex;
+            gap: 0.8rem;
+            flex-wrap: wrap;
+            margin-top: 0.5rem;
+        }
+
         .service-link {
-            color: var(--whatsapp-dark);
             font-weight: bold;
             text-decoration: none;
             display: inline-flex;
             align-items: center;
             gap: 0.3rem;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
+            padding: 0.4rem 0.8rem;
+            border-radius: 4px;
+            color: white;
+            transition: opacity 0.2s;
+        }
+
+        .service-link.wa {
+            background: var(--whatsapp-dark);
+        }
+
+        .service-link.msg {
+            background: var(--messenger);
         }
 
         .service-link:hover {
-            text-decoration: underline;
+            opacity: 0.9;
+            text-decoration: none;
         }
 
         /* QUOTE FORM SECTION */
@@ -355,25 +402,47 @@
             border-color: var(--primary);
         }
 
-        .submit-whatsapp-btn {
-            background: var(--whatsapp);
-            color: white;
+        .form-actions {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .submit-btn {
+            flex: 1;
+            min-width: 220px;
             border: none;
-            padding: 1rem 2rem;
+            padding: 1rem 1.5rem;
             border-radius: 6px;
-            font-size: 1.1rem;
+            font-size: 1.05rem;
             font-weight: bold;
             cursor: pointer;
-            width: 100%;
             display: flex;
             align-items: center;
             justify-content: center;
             gap: 0.5rem;
-            transition: background 0.3s;
+            color: white;
+            transition: background 0.3s, transform 0.2s;
         }
 
-        .submit-whatsapp-btn:hover {
+        .submit-btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .submit-btn.whatsapp {
+            background: var(--whatsapp);
+        }
+
+        .submit-btn.whatsapp:hover {
             background: var(--whatsapp-dark);
+        }
+
+        .submit-btn.messenger {
+            background: var(--messenger);
+        }
+
+        .submit-btn.messenger:hover {
+            background: var(--messenger-dark);
         }
 
         /* HARDWARE SECTION */
@@ -479,6 +548,8 @@
             .logo-title { font-size: 1.8rem; }
             .subtitle { font-size: 1rem; }
             .nav-links { gap: 1rem; }
+            .btn-group { flex-direction: column; }
+            .form-actions { flex-direction: column; }
         }
     </style>
 </head>
@@ -513,9 +584,9 @@
 
         <section id="quote">
             <div class="quote-form-section">
-                <h2 class="section-title">Request a Free Quote via WhatsApp</h2>
-                <p style="text-align: center; margin-bottom: 1.5rem; color: #64748b;">Fill in your details below and click submit to send your request directly to our WhatsApp!</p>
-                <form id="whatsappQuoteForm" onsubmit="sendWhatsAppQuote(event)">
+                <h2 class="section-title">Request a Free Quote</h2>
+                <p style="text-align: center; margin-bottom: 1.5rem; color: #64748b;">Fill in your details below and choose whether to send your request via WhatsApp or Messenger!</p>
+                <form id="quoteForm">
                     <div class="form-group">
                         <label for="clientName">Your Full Name:</label>
                         <input type="text" id="clientName" placeholder="e.g. Juan Dela Cruz" required>
@@ -547,9 +618,14 @@
                         <textarea id="clientNotes" rows="3" placeholder="Describe your site, number of cameras needed, or special requests..."></textarea>
                     </div>
 
-                    <button type="submit" class="submit-whatsapp-btn">
-                        💬 Send Quote Request to WhatsApp (09517656601)
-                    </button>
+                    <div class="form-actions">
+                        <button type="button" onclick="sendWhatsAppQuote(event)" class="submit-btn whatsapp">
+                            💬 Send via WhatsApp
+                        </button>
+                        <button type="button" onclick="sendMessengerQuote(event)" class="submit-btn messenger">
+                            ⚡ Send via Messenger
+                        </button>
+                    </div>
                 </form>
             </div>
         </section>
@@ -572,9 +648,15 @@
                         <li>✔️ Professional Installation</li>
                         <li>✔️ Remote Mobile App Setup</li>
                     </ul>
-                    <a href="https://wa.me/639517656601?text=Hello%20Sentinel%20Guard%20System!%20I%20am%20interested%20in%20your%204-Channel%20CCTV%20Package%20(%E2%82%B115,000).%20Please%20send%20me%20more%20details." target="_blank" class="package-btn">
-                        💬 Request Quote via WhatsApp
-                    </a>
+                    <div class="btn-group">
+                        <a href="https://wa.me/639517656601?text=Hello%20Sentinel%20Guard%20System!%20I%20am%20interested%20in%20your%204-Channel%20CCTV%20Package%20(%E2%82%B115,000)." target="_blank" class="package-btn btn-whatsapp">
+                            💬 WhatsApp
+                        </a>
+                        <!-- REPLACE 'yourpageusername' WITH YOUR FACEBOOK PAGE USERNAME/ID -->
+                        <a href="https://m.me/yourpageusername?text=Hello%20Sentinel%20Guard%20System!%20I%20am%20interested%20in%20your%204-Channel%20CCTV%20Package%20(%E2%82%B115,000)." target="_blank" class="package-btn btn-messenger">
+                            ⚡ Messenger
+                        </a>
+                    </div>
                 </div>
 
                 <!-- 8 Channel Package -->
@@ -592,9 +674,14 @@
                         <li>✔️ Professional Installation</li>
                         <li>✔️ Remote Mobile App Setup</li>
                     </ul>
-                    <a href="https://wa.me/639517656601?text=Hello%20Sentinel%20Guard%20System!%20I%20am%20interested%20in%20your%208-Channel%20CCTV%20Package%20(%E2%82%B126,900).%20Please%20send%20me%20more%20details." target="_blank" class="package-btn">
-                        💬 Request Quote via WhatsApp
-                    </a>
+                    <div class="btn-group">
+                        <a href="https://wa.me/639517656601?text=Hello%20Sentinel%20Guard%20System!%20I%20am%20interested%20in%20your%208-Channel%20CCTV%20Package%20(%E2%82%B126,900)." target="_blank" class="package-btn btn-whatsapp">
+                            💬 WhatsApp
+                        </a>
+                        <a href="https://m.me/yourpageusername?text=Hello%20Sentinel%20Guard%20System!%20I%20am%20interested%20in%20your%208-Channel%20CCTV%20Package%20(%E2%82%B126,900)." target="_blank" class="package-btn btn-messenger">
+                            ⚡ Messenger
+                        </a>
+                    </div>
                 </div>
 
                 <!-- 16 Channel Package -->
@@ -611,9 +698,14 @@
                         <li>✔️ Professional Installation</li>
                         <li>✔️ Remote Mobile App Setup</li>
                     </ul>
-                    <a href="https://wa.me/639517656601?text=Hello%20Sentinel%20Guard%20System!%20I%20am%20interested%20in%20your%2016-Channel%20CCTV%20Package%20(%E2%82%B152,900).%20Please%20send%20me%20more%20details." target="_blank" class="package-btn">
-                        💬 Request Quote via WhatsApp
-                    </a>
+                    <div class="btn-group">
+                        <a href="https://wa.me/639517656601?text=Hello%20Sentinel%20Guard%20System!%20I%20am%20interested%20in%20your%2016-Channel%20CCTV%20Package%20(%E2%82%B152,900)." target="_blank" class="package-btn btn-whatsapp">
+                            💬 WhatsApp
+                        </a>
+                        <a href="https://m.me/yourpageusername?text=Hello%20Sentinel%20Guard%20System!%20I%20am%20interested%20in%20your%2016-Channel%20CCTV%20Package%20(%E2%82%B152,900)." target="_blank" class="package-btn btn-messenger">
+                            ⚡ Messenger
+                        </a>
+                    </div>
                 </div>
 
             </div>
@@ -627,56 +719,80 @@
                         <h3>CCTV Surveillance Systems</h3>
                         <p>HD security camera installation, maintenance, and remote mobile viewing.</p>
                     </div>
-                    <a href="https://wa.me/639517656601?text=Hello%20Sentinel%20Guard%20System!%20I%20want%20to%20request%20a%20quote%20for%20CCTV%20Surveillance%20Systems." target="_blank" class="service-link">💬 Inquire via WhatsApp →</a>
+                    <div class="service-links">
+                        <a href="https://wa.me/639517656601?text=Hello%20Sentinel%20Guard%20System!%20I%20want%20to%20request%20a%20quote%20for%20CCTV%20Surveillance%20Systems." target="_blank" class="service-link wa">💬 WhatsApp</a>
+                        <a href="https://m.me/yourpageusername?text=Hello%20Sentinel%20Guard%20System!%20I%20want%20to%20request%20a%20quote%20for%20CCTV%20Surveillance%20Systems." target="_blank" class="service-link msg">⚡ Messenger</a>
+                    </div>
                 </div>
                 <div class="service-card">
                     <div>
                         <h3>WiFi & LAN Network Installation</h3>
                         <p>Fast, stable, and secure internet connectivity for homes and businesses.</p>
                     </div>
-                    <a href="https://wa.me/639517656601?text=Hello%20Sentinel%20Guard%20System!%20I%20want%20to%20request%20a%20quote%20for%20WiFi%20%26%20LAN%20Network%20Installation." target="_blank" class="service-link">💬 Inquire via WhatsApp →</a>
+                    <div class="service-links">
+                        <a href="https://wa.me/639517656601?text=Hello%20Sentinel%20Guard%20System!%20I%20want%20to%20request%20a%20quote%20for%20WiFi%20%26%20LAN%20Network%20Installation." target="_blank" class="service-link wa">💬 WhatsApp</a>
+                        <a href="https://m.me/yourpageusername?text=Hello%20Sentinel%20Guard%20System!%20I%20want%20to%20request%20a%20quote%20for%20WiFi%20%26%20LAN%20Network%20Installation." target="_blank" class="service-link msg">⚡ Messenger</a>
+                    </div>
                 </div>
                 <div class="service-card">
                     <div>
                         <h3>Structured Cabling Solutions</h3>
                         <p>Neat, organized cabling for optimal network performance and longevity.</p>
                     </div>
-                    <a href="https://wa.me/639517656601?text=Hello%20Sentinel%20Guard%20System!%20I%20want%20to%20request%20a%20quote%20for%20Structured%20Cabling%20Solutions." target="_blank" class="service-link">💬 Inquire via WhatsApp →</a>
+                    <div class="service-links">
+                        <a href="https://wa.me/639517656601?text=Hello%20Sentinel%20Guard%20System!%20I%20want%20to%20request%20a%20quote%20for%20Structured%20Cabling%20Solutions." target="_blank" class="service-link wa">💬 WhatsApp</a>
+                        <a href="https://m.me/yourpageusername?text=Hello%20Sentinel%20Guard%20System!%20I%20want%20to%20request%20a%20quote%20for%20Structured%20Cabling%20Solutions." target="_blank" class="service-link msg">⚡ Messenger</a>
+                    </div>
                 </div>
                 <div class="service-card">
                     <div>
                         <h3>Gate Barrier & Vehicle Access</h3>
                         <p>Smart controlled vehicle access systems for residential and commercial sites.</p>
                     </div>
-                    <a href="https://wa.me/639517656601?text=Hello%20Sentinel%20Guard%20System!%20I%20want%20to%20request%20a%20quote%20for%20Gate%20Barrier%20%26%20Vehicle%20Access%20Systems." target="_blank" class="service-link">💬 Inquire via WhatsApp →</a>
+                    <div class="service-links">
+                        <a href="https://wa.me/639517656601?text=Hello%20Sentinel%20Guard%20System!%20I%20want%20to%20request%20a%20quote%20for%20Gate%20Barrier%20%26%20Vehicle%20Access%20Systems." target="_blank" class="service-link wa">💬 WhatsApp</a>
+                        <a href="https://m.me/yourpageusername?text=Hello%20Sentinel%20Guard%20System!%20I%20want%20to%20request%20a%20quote%20for%20Gate%20Barrier%20%26%20Vehicle%20Access%20Systems." target="_blank" class="service-link msg">⚡ Messenger</a>
+                    </div>
                 </div>
                 <div class="service-card">
                     <div>
                         <h3>Access Control & Door Entry</h3>
                         <p>Keypad, smart card, and biometric entry solutions for secure areas.</p>
                     </div>
-                    <a href="https://wa.me/639517656601?text=Hello%20Sentinel%20Guard%20System!%20I%20want%20to%20request%20a%20quote%20for%20Access%20Control%20%26%20Door%20Entry." target="_blank" class="service-link">💬 Inquire via WhatsApp →</a>
+                    <div class="service-links">
+                        <a href="https://wa.me/639517656601?text=Hello%20Sentinel%20Guard%20System!%20I%20want%20to%20request%20a%20quote%20for%20Access%20Control%20%26%20Door%20Entry." target="_blank" class="service-link wa">💬 WhatsApp</a>
+                        <a href="https://m.me/yourpageusername?text=Hello%20Sentinel%20Guard%20System!%20I%20want%20to%20request%20a%20quote%20for%20Access%20Control%20%26%20Door%20Entry." target="_blank" class="service-link msg">⚡ Messenger</a>
+                    </div>
                 </div>
                 <div class="service-card">
                     <div>
                         <h3>Solar Power Systems</h3>
                         <p>Sustainable, cost-effective power solutions tailored to your energy needs.</p>
                     </div>
-                    <a href="https://wa.me/639517656601?text=Hello%20Sentinel%20Guard%20System!%20I%20want%20to%20request%20a%20quote%20for%20Solar%20Power%20Systems." target="_blank" class="service-link">💬 Inquire via WhatsApp →</a>
+                    <div class="service-links">
+                        <a href="https://wa.me/639517656601?text=Hello%20Sentinel%20Guard%20System!%20I%20want%20to%20request%20a%20quote%20for%20Solar%20Power%20Systems." target="_blank" class="service-link wa">💬 WhatsApp</a>
+                        <a href="https://m.me/yourpageusername?text=Hello%20Sentinel%20Guard%20System!%20I%20want%20to%20request%20a%20quote%20for%20Solar%20Power%20Systems." target="_blank" class="service-link msg">⚡ Messenger</a>
+                    </div>
                 </div>
                 <div class="service-card">
                     <div>
                         <h3>Server & Network Infrastructure</h3>
                         <p>Professional server setup, rack management, and routing infrastructure.</p>
                     </div>
-                    <a href="https://wa.me/639517656601?text=Hello%20Sentinel%20Guard%20System!%20I%20want%20to%20request%20a%20quote%20for%20Server%20%26%20Network%20Infrastructure." target="_blank" class="service-link">💬 Inquire via WhatsApp →</a>
+                    <div class="service-links">
+                        <a href="https://wa.me/639517656601?text=Hello%20Sentinel%20Guard%20System!%20I%20want%20to%20request%20a%20quote%20for%20Server%20%26%20Network%20Infrastructure." target="_blank" class="service-link wa">💬 WhatsApp</a>
+                        <a href="https://m.me/yourpageusername?text=Hello%20Sentinel%20Guard%20System!%20I%20want%20to%20request%20a%20quote%20for%20Server%20%26%20Network%20Infrastructure." target="_blank" class="service-link msg">⚡ Messenger</a>
+                    </div>
                 </div>
                 <div class="service-card">
                     <div>
                         <h3>Technical Support & Maintenance</h3>
                         <p>Preventative maintenance and rapid security system repair services.</p>
                     </div>
-                    <a href="https://wa.me/639517656601?text=Hello%20Sentinel%20Guard%20System!%20I%20want%20to%20request%20a%20quote%20for%20Technical%20Support%20%26%20Preventative%20Maintenance." target="_blank" class="service-link">💬 Inquire via WhatsApp →</a>
+                    <div class="service-links">
+                        <a href="https://wa.me/639517656601?text=Hello%20Sentinel%20Guard%20System!%20I%20want%20to%20request%20a%20quote%20for%20Technical%20Support%20%26%20Preventative%20Maintenance." target="_blank" class="service-link wa">💬 WhatsApp</a>
+                        <a href="https://m.me/yourpageusername?text=Hello%20Sentinel%20Guard%20System!%20I%20want%20to%20request%20a%20quote%20for%20Technical%20Support%20%26%20Preventative%20Maintenance." target="_blank" class="service-link msg">⚡ Messenger</a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -703,6 +819,7 @@
                     <ul class="contact-list">
                         <li>📞 <strong>Call Us:</strong> <a href="tel:09517656601">09517656601</a></li>
                         <li>💬 <strong>WhatsApp Direct:</strong> <a href="https://wa.me/639517656601?text=Hello%20Sentinel%20Guard%20System!" target="_blank">Chat on WhatsApp (09517656601)</a></li>
+                        <li>⚡ <strong>Messenger Direct:</strong> <a href="https://m.me/yourpageusername" target="_blank">Chat on Facebook Messenger</a></li>
                         <li>✉️ <strong>Email:</strong> <a href="mailto:sentinelguardsystem@gmail.com">sentinelguardsystem@gmail.com</a></li>
                     </ul>
                 </div>
@@ -742,30 +859,54 @@
     </footer>
 
     <script>
-        function sendWhatsAppQuote(e) {
-            e.preventDefault();
+        function validateForm() {
+            var name = document.getElementById('clientName').value.trim();
+            var location = document.getElementById('clientLocation').value.trim();
+            var service = document.getElementById('serviceType').value;
             
+            if (!name || !location || !service) {
+                alert("Please fill in your Name, Location, and Service requirement.");
+                return false;
+            }
+            return true;
+        }
+
+        function getFormDetails() {
             var name = document.getElementById('clientName').value;
             var location = document.getElementById('clientLocation').value;
             var service = document.getElementById('serviceType').value;
             var notes = document.getElementById('clientNotes').value;
-            
-            var phoneNumber = "639517656601";
-            
-            var message = "Hello Sentinel Guard System! I would like to request a quote:%0A%0A" +
-                          "*Name:* " + encodeURIComponent(name) + "%0A" +
-                          "*Location:* " + encodeURIComponent(location) + "%0A" +
-                          "*Service/Package:* " + encodeURIComponent(service) + "%0A";
+
+            var message = "Hello Sentinel Guard System! I would like to request a quote:\n\n" +
+                          "*Name:* " + name + "\n" +
+                          "*Location:* " + location + "\n" +
+                          "*Service/Package:* " + service + "\n";
                           
             if (notes.trim() !== "") {
-                message += "*Notes/Details:* " + encodeURIComponent(notes) + "%0A";
+                message += "*Notes/Details:* " + notes + "\n";
             }
             
-            message += "%0APlease provide me with information and pricing.";
+            message += "\nPlease provide me with information and pricing.";
+            return message;
+        }
+
+        function sendWhatsAppQuote(e) {
+            if (!validateForm()) return;
             
-            var whatsappUrl = "https://wa.me/" + phoneNumber + "?text=" + message;
-            
+            var phoneNumber = "639517656601";
+            var message = getFormDetails();
+            var whatsappUrl = "https://wa.me/" + phoneNumber + "?text=" + encodeURIComponent(message);
             window.open(whatsappUrl, '_blank');
+        }
+
+        function sendMessengerQuote(e) {
+            if (!validateForm()) return;
+
+            // CHANGE 'yourpageusername' TO YOUR ACTUAL FACEBOOK PAGE USERNAME OR ID
+            var pageUsername = "yourpageusername"; 
+            var message = getFormDetails();
+            var messengerUrl = "https://m.me/" + pageUsername + "?text=" + encodeURIComponent(message);
+            window.open(messengerUrl, '_blank');
         }
     </script>
 
