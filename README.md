@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<Sentinel Guard System | Security & Network Solutions>
 <html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8"><!DOCTYPE html>
