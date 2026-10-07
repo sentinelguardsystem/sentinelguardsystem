@@ -652,8 +652,7 @@
                         <a href="https://wa.me/639517656601?text=Hello%20Sentinel%20Guard%20System!%20I%20am%20interested%20in%20your%204-Channel%20CCTV%20Package%20(%E2%82%B115,000)." target="_blank" class="package-btn btn-whatsapp">
                             💬 WhatsApp
                         </a>
-                        <!-- REPLACE 'yourpageusername' WITH YOUR FACEBOOK PAGE USERNAME/ID -->
-                        <a href="https://m.me/yourpageusername?text=Hello%20Sentinel%20Guard%20System!%20I%20am%20interested%20in%20your%204-Channel%20CCTV%20Package%20(%E2%82%B115,000)." target="_blank" class="package-btn btn-messenger">
+                        <a href="https://m.me/SentinelGuardSystem?text=Hello%20Sentinel%20Guard%20System!%20I%20am%20interested%20in%20your%204-Channel%20CCTV%20Package%20(%E2%82%B115,000)." target="_blank" class="package-btn btn-messenger">
                             ⚡ Messenger
                         </a>
                     </div>
@@ -678,7 +677,7 @@
                         <a href="https://wa.me/639517656601?text=Hello%20Sentinel%20Guard%20System!%20I%20am%20interested%20in%20your%208-Channel%20CCTV%20Package%20(%E2%82%B126,900)." target="_blank" class="package-btn btn-whatsapp">
                             💬 WhatsApp
                         </a>
-                        <a href="https://m.me/yourpageusername?text=Hello%20Sentinel%20Guard%20System!%20I%20am%20interested%20in%20your%208-Channel%20CCTV%20Package%20(%E2%82%B126,900)." target="_blank" class="package-btn btn-messenger">
+                        <a href="https://m.me/SentinelGuardSystem?text=Hello%20Sentinel%20Guard%20System!%20I%20am%20interested%20in%20your%208-Channel%20CCTV%20Package%20(%E2%82%B126,900)." target="_blank" class="package-btn btn-messenger">
                             ⚡ Messenger
                         </a>
                     </div>
@@ -702,7 +701,7 @@
                         <a href="https://wa.me/639517656601?text=Hello%20Sentinel%20Guard%20System!%20I%20am%20interested%20in%20your%2016-Channel%20CCTV%20Package%20(%E2%82%B152,900)." target="_blank" class="package-btn btn-whatsapp">
                             💬 WhatsApp
                         </a>
-                        <a href="https://m.me/yourpageusername?text=Hello%20Sentinel%20Guard%20System!%20I%20am%20interested%20in%20your%2016-Channel%20CCTV%20Package%20(%E2%82%B152,900)." target="_blank" class="package-btn btn-messenger">
+                        <a href="https://m.me/SentinelGuardSystem?text=Hello%20Sentinel%20Guard%20System!%20I%20am%20interested%20in%20your%2016-Channel%20CCTV%20Package%20(%E2%82%B152,900)." target="_blank" class="package-btn btn-messenger">
                             ⚡ Messenger
                         </a>
                     </div>
@@ -721,7 +720,7 @@
                     </div>
                     <div class="service-links">
                         <a href="https://wa.me/639517656601?text=Hello%20Sentinel%20Guard%20System!%20I%20want%20to%20request%20a%20quote%20for%20CCTV%20Surveillance%20Systems." target="_blank" class="service-link wa">💬 WhatsApp</a>
-                        <a href="https://m.me/yourpageusername?text=Hello%20Sentinel%20Guard%20System!%20I%20want%20to%20request%20a%20quote%20for%20CCTV%20Surveillance%20Systems." target="_blank" class="service-link msg">⚡ Messenger</a>
+                        <a href="https://m.me/SentinelGuardSystem?text=Hello%20Sentinel%20Guard%20System!%20I%20want%20to%20request%20a%20quote%20for%20CCTV%20Surveillance%20Systems." target="_blank" class="service-link msg">⚡ Messenger</a>
                     </div>
                 </div>
                 <div class="service-card">
@@ -731,7 +730,7 @@
                     </div>
                     <div class="service-links">
                         <a href="https://wa.me/639517656601?text=Hello%20Sentinel%20Guard%20System!%20I%20want%20to%20request%20a%20quote%20for%20WiFi%20%26%20LAN%20Network%20Installation." target="_blank" class="service-link wa">💬 WhatsApp</a>
-                        <a href="https://m.me/yourpageusername?text=Hello%20Sentinel%20Guard%20System!%20I%20want%20to%20request%20a%20quote%20for%20WiFi%20%26%20LAN%20Network%20Installation." target="_blank" class="service-link msg">⚡ Messenger</a>
+                        <a href="https://m.me/SentinelGuardSystem?text=Hello%20Sentinel%20Guard%20System!%20I%20want%20to%20request%20a%20quote%20for%20WiFi%20%26%20LAN%20Network%20Installation." target="_blank" class="service-link msg">⚡ Messenger</a>
                     </div>
                 </div>
                 <div class="service-card">
@@ -741,7 +740,7 @@
                     </div>
                     <div class="service-links">
                         <a href="https://wa.me/639517656601?text=Hello%20Sentinel%20Guard%20System!%20I%20want%20to%20request%20a%20quote%20for%20Structured%20Cabling%20Solutions." target="_blank" class="service-link wa">💬 WhatsApp</a>
-                        <a href="https://m.me/yourpageusername?text=Hello%20Sentinel%20Guard%20System!%20I%20want%20to%20request%20a%20quote%20for%20Structured%20Cabling%20Solutions." target="_blank" class="service-link msg">⚡ Messenger</a>
+                        <a href="https://m.me/SentinelGuardSystem?text=Hello%20Sentinel%20Guard%20System!%20I%20want%20to%20request%20a%20quote%20for%20Structured%20Cabling%20Solutions." target="_blank" class="service-link msg">⚡ Messenger</a>
                     </div>
                 </div>
                 <div class="service-card">
@@ -751,7 +750,7 @@
                     </div>
                     <div class="service-links">
                         <a href="https://wa.me/639517656601?text=Hello%20Sentinel%20Guard%20System!%20I%20want%20to%20request%20a%20quote%20for%20Gate%20Barrier%20%26%20Vehicle%20Access%20Systems." target="_blank" class="service-link wa">💬 WhatsApp</a>
-                        <a href="https://m.me/yourpageusername?text=Hello%20Sentinel%20Guard%20System!%20I%20want%20to%20request%20a%20quote%20for%20Gate%20Barrier%20%26%20Vehicle%20Access%20Systems." target="_blank" class="service-link msg">⚡ Messenger</a>
+                        <a href="https://m.me/SentinelGuardSystem?text=Hello%20Sentinel%20Guard%20System!%20I%20want%20to%20request%20a%20quote%20for%20Gate%20Barrier%20%26%20Vehicle%20Access%20Systems." target="_blank" class="service-link msg">⚡ Messenger</a>
                     </div>
                 </div>
                 <div class="service-card">
@@ -761,7 +760,7 @@
                     </div>
                     <div class="service-links">
                         <a href="https://wa.me/639517656601?text=Hello%20Sentinel%20Guard%20System!%20I%20want%20to%20request%20a%20quote%20for%20Access%20Control%20%26%20Door%20Entry." target="_blank" class="service-link wa">💬 WhatsApp</a>
-                        <a href="https://m.me/yourpageusername?text=Hello%20Sentinel%20Guard%20System!%20I%20want%20to%20request%20a%20quote%20for%20Access%20Control%20%26%20Door%20Entry." target="_blank" class="service-link msg">⚡ Messenger</a>
+                        <a href="https://m.me/SentinelGuardSystem?text=Hello%20Sentinel%20Guard%20System!%20I%20want%20to%20request%20a%20quote%20for%20Access%20Control%20%26%20Door%20Entry." target="_blank" class="service-link msg">⚡ Messenger</a>
                     </div>
                 </div>
                 <div class="service-card">
@@ -771,7 +770,7 @@
                     </div>
                     <div class="service-links">
                         <a href="https://wa.me/639517656601?text=Hello%20Sentinel%20Guard%20System!%20I%20want%20to%20request%20a%20quote%20for%20Solar%20Power%20Systems." target="_blank" class="service-link wa">💬 WhatsApp</a>
-                        <a href="https://m.me/yourpageusername?text=Hello%20Sentinel%20Guard%20System!%20I%20want%20to%20request%20a%20quote%20for%20Solar%20Power%20Systems." target="_blank" class="service-link msg">⚡ Messenger</a>
+                        <a href="https://m.me/SentinelGuardSystem?text=Hello%20Sentinel%20Guard%20System!%20I%20want%20to%20request%20a%20quote%20for%20Solar%20Power%20Systems." target="_blank" class="service-link msg">⚡ Messenger</a>
                     </div>
                 </div>
                 <div class="service-card">
@@ -781,7 +780,7 @@
                     </div>
                     <div class="service-links">
                         <a href="https://wa.me/639517656601?text=Hello%20Sentinel%20Guard%20System!%20I%20want%20to%20request%20a%20quote%20for%20Server%20%26%20Network%20Infrastructure." target="_blank" class="service-link wa">💬 WhatsApp</a>
-                        <a href="https://m.me/yourpageusername?text=Hello%20Sentinel%20Guard%20System!%20I%20want%20to%20request%20a%20quote%20for%20Server%20%26%20Network%20Infrastructure." target="_blank" class="service-link msg">⚡ Messenger</a>
+                        <a href="https://m.me/SentinelGuardSystem?text=Hello%20Sentinel%20Guard%20System!%20I%20want%20to%20request%20a%20quote%20for%20Server%20%26%20Network%20Infrastructure." target="_blank" class="service-link msg">⚡ Messenger</a>
                     </div>
                 </div>
                 <div class="service-card">
@@ -791,7 +790,7 @@
                     </div>
                     <div class="service-links">
                         <a href="https://wa.me/639517656601?text=Hello%20Sentinel%20Guard%20System!%20I%20want%20to%20request%20a%20quote%20for%20Technical%20Support%20%26%20Preventative%20Maintenance." target="_blank" class="service-link wa">💬 WhatsApp</a>
-                        <a href="https://m.me/yourpageusername?text=Hello%20Sentinel%20Guard%20System!%20I%20want%20to%20request%20a%20quote%20for%20Technical%20Support%20%26%20Preventative%20Maintenance." target="_blank" class="service-link msg">⚡ Messenger</a>
+                        <a href="https://m.me/SentinelGuardSystem?text=Hello%20Sentinel%20Guard%20System!%20I%20want%20to%20request%20a%20quote%20for%20Technical%20Support%20%26%20Preventative%20Maintenance." target="_blank" class="service-link msg">⚡ Messenger</a>
                     </div>
                 </div>
             </div>
@@ -819,7 +818,7 @@
                     <ul class="contact-list">
                         <li>📞 <strong>Call Us:</strong> <a href="tel:09517656601">09517656601</a></li>
                         <li>💬 <strong>WhatsApp Direct:</strong> <a href="https://wa.me/639517656601?text=Hello%20Sentinel%20Guard%20System!" target="_blank">Chat on WhatsApp (09517656601)</a></li>
-                        <li>⚡ <strong>Messenger Direct:</strong> <a href="https://m.me/yourpageusername" target="_blank">Chat on Facebook Messenger</a></li>
+                        <li>⚡ <strong>Messenger Direct:</strong> <a href="https://m.me/SentinelGuardSystem" target="_blank">Chat on Facebook Messenger</a></li>
                         <li>✉️ <strong>Email:</strong> <a href="mailto:sentinelguardsystem@gmail.com">sentinelguardsystem@gmail.com</a></li>
                     </ul>
                 </div>
@@ -902,8 +901,7 @@
         function sendMessengerQuote(e) {
             if (!validateForm()) return;
 
-            // CHANGE 'yourpageusername' TO YOUR ACTUAL FACEBOOK PAGE USERNAME OR ID
-            var pageUsername = "yourpageusername"; 
+            var pageUsername = "SentinelGuardSystem"; 
             var message = getFormDetails();
             var messengerUrl = "https://m.me/" + pageUsername + "?text=" + encodeURIComponent(message);
             window.open(messengerUrl, '_blank');
