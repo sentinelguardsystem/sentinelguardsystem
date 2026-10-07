@@ -585,7 +585,7 @@
         <section id="quote">
             <div class="quote-form-section">
                 <h2 class="section-title">Request a Free Quote</h2>
-                <p style="text-align: center; margin-bottom: 1.5rem; color: #64748b;">Fill in your details below and choose whether to send your request via WhatsApp or Messenger!</p>
+                <p style="text-align: center; margin-bottom: 1.5rem; color: #64748b;">Select your service or package below, and send the pre-filled quote request directly via WhatsApp or Messenger!</p>
                 <form id="quoteForm">
                     <div class="form-group">
                         <label for="clientName">Your Full Name:</label>
@@ -871,21 +871,21 @@
         }
 
         function getFormDetails() {
-            var name = document.getElementById('clientName').value;
-            var location = document.getElementById('clientLocation').value;
+            var name = document.getElementById('clientName').value.trim();
+            var location = document.getElementById('clientLocation').value.trim();
             var service = document.getElementById('serviceType').value;
-            var notes = document.getElementById('clientNotes').value;
+            var notes = document.getElementById('clientNotes').value.trim();
 
             var message = "Hello Sentinel Guard System! I would like to request a quote:\n\n" +
-                          "*Name:* " + name + "\n" +
-                          "*Location:* " + location + "\n" +
-                          "*Service/Package:* " + service + "\n";
+                          "👤 Name: " + name + "\n" +
+                          "📍 Location: " + location + "\n" +
+                          "🛠️ Selected Quote/Service: " + service;
                           
-            if (notes.trim() !== "") {
-                message += "*Notes/Details:* " + notes + "\n";
+            if (notes !== "") {
+                message += "\n📝 Notes/Details: " + notes;
             }
             
-            message += "\nPlease provide me with information and pricing.";
+            message += "\n\nPlease send me details and pricing for this selection.";
             return message;
         }
 
